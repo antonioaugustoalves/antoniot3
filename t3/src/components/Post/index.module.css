@@ -1,0 +1,11 @@
+export function Post(){
+  /* 
+  1 - O post deve ter 2 propriedades do tipo 
+  string: title e content 
+
+  2 - Usar o index.module.css para formatar o 
+  componente Post .  A única regra é usar as
+  cores que estão nas variaveis do arquivo 
+  global.css
+  */
+}
