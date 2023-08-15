@@ -1,17 +1,23 @@
 import { Header } from "./components/Header";
 import { Post } from "./components/Post";
+import './global.css';
+import styles from './App.module.css'
+import { Sidebar } from "./components/Sidebar";
 export function App() {
   return (
-    <>
-    <Header/>
-    <Post 
-    title="Férias de inverno" 
-    content="Foi bem legal. Fiz muitas coisas divertidas"/>
+    <div>
+      <Header />
+      <div className={styles.wrapper}>
+       <Sidebar/>
+        <main>
+          <Post title="Meu post"
+            content="Este é o meu primeiro post" />
 
-<Post 
-    title="De volta ao trabalho" 
-    content="Hoje iniciamos uma nova etapa. Novas turmas estão começado hoje 👍"/>
-    </>
+          <Post title="Novo post"
+            content="Apenas para atualizar o feed." />
+        </main>
+      </div>
+    </div>
   )
 }
 
