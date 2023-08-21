@@ -1,9 +1,6 @@
 import styles from './index.module.css'
 
-interface PostProps {
-  title: string;
-  content: string;
-}
+
 export function Post(){
   return (
       <article className={styles.post}>
