@@ -1,7 +1,11 @@
+import { Comment } from '../Comment';
 import styles from './index.module.css'
-
-
-export function Post(){
+interface PostProps{
+  title: string;
+  content: string;
+  date: string;
+}
+export function Post(props: PostProps){
   return (
       <article className={styles.post}>
         <header>
@@ -13,17 +17,27 @@ export function Post(){
             </div>
           </div>
           <time
-          title='14 de agosto de 2023 as 17:50:00'
-          dateTime="2023-08-14 17:50:00">
+          title='21 de agosto de 2023 as 17:50:00'
+          dateTime={props.date}>
             Publicado a 1h
             </time>
         </header>
         <div className={styles.content}>
-            <p>Fala galera! Tudo beleza? 👍</p>
-            <p>Hoje vamos aprender algo novo</p>
-            <p>Nosso novo projeto está saindo do forno</p>
-            <p><a href="#">#SouDuque</a></p>
-           <p><a href="#">#Tecnico</a></p>
+            <h3>{props.title}👍</h3>
+            <p>{props.content}</p>
+           <p>👍{' '}<a href="#">#Tecnico</a></p>
+        </div>
+        <form className={styles.commentForm}>
+          <strong>Deixe seu comentário</strong>
+          <textarea placeholder="Deixe seu comentário."/>
+          <footer>
+          <button type="submit">Comentar</button>
+          </footer>
+        </form>
+        <div className={styles.commentList}>
+          <Comment/>
+          <Comment/>
+          <Comment/>
         </div>
       </article>
   )

@@ -1,5 +1,6 @@
 import styles from './index.module.css'
 import logoIgnite from '../../assets/ignite-logo.svg'
+import React from 'react'
 export function Header() {
   return(
    <div className={styles.header}>
